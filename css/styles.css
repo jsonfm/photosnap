@@ -45,6 +45,7 @@ ul {
 
 .btn {
     padding: 1rem 2rem;
+    cursor: pointer;
 }
 .btn-dark {
     background: black;
@@ -76,10 +77,35 @@ header {
     font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
+    z-index: 50;
 }
 
 header .navigation {
-    display: none;
+    position: absolute;
+    background: white;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 180px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+header .navigation li {
+    margin: .5rem 0;
+}
+
+header .navigation li a {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header .navigation.active {
+    top: 8%;
 }
 
 header .burger {
@@ -88,6 +114,7 @@ header .burger {
     /* border: 1px solid; */
     position: relative;
     cursor: pointer;
+    z-index: 100;
 }
 
 header .burger > div {
@@ -117,6 +144,10 @@ header .burger.active div:nth-child(2) {
     top: 40%;
     left: 50%;
     transform: translateX(-50%) translateY(40%) rotate(-45deg);
+}
+
+header .invite-btn {
+    display: none;
 }
 
 /* Features */
@@ -285,10 +316,36 @@ footer .grid {
 footer .logo {
     color: white;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    z-index: 50;
 }
 
 footer .social {
     display: flex;
     color: white;
+}
+
+@media (min-width: 768px) {
+    header .burger {
+        display: none;
+    }
+
+    header .navigation, 
+    header .navigation.active {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header .invite-btn {
+        display: flex;
+        width: 300px;
+        font-size: .9rem;
+        justify-content: center;
+    }
 }
 
