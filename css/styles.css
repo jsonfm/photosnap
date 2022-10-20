@@ -166,16 +166,14 @@ header .burger.active div:nth-child(2) {
 /* Stories */
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-    /* border: 2px solid; */
-    /* min-height: 500px; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .story {
     position: relative;
     color: white;
-    height: 400px;
+    height: 430px;
 }
 
 .story:after {
@@ -202,7 +200,8 @@ header .burger.active div:nth-child(2) {
     position: absolute;
     z-index: 10;
     bottom: 6%;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    width: 100%;
 }
 
 .story .info h4 {
@@ -212,6 +211,18 @@ header .burger.active div:nth-child(2) {
 
 .story .info hr {
     margin: 16px 0;
+}
+
+.story .info .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.story .info .buttons img {
+    width: 30px;
+    height: 10px;
+    position: relative;
 }
 
 /* Simple features */
@@ -228,6 +239,17 @@ header .burger.active div:nth-child(2) {
     padding: 1rem 2rem;
     text-align: center;
     margin-top: -1rem;
+}
+
+.simple-feature .wrapper {
+    display: grid;
+    place-items: center;
+    height: 70px;
+    margin-bottom: 40px;
+}
+
+.simple-feature .wrapper img {
+    max-width: 100%;
 }
 
 .simple-feature i {
