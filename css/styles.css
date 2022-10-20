@@ -214,6 +214,37 @@ header .burger.active div:nth-child(2) {
     margin: 16px 0;
 }
 
+/* Simple features */
+.simple-features {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    min-height: 450px;
+    padding: 4rem 0;
+}
+
+.simple-feature {
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: -1rem;
+}
+
+.simple-feature i {
+    font-size: 3rem;
+}
+
+.simple-feature h5 {
+    font-size: 1rem;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.simple-feature p {
+    color: var(--light-black);
+    font-size: .8rem;
+}
+
 /* Footer */
 
 footer {
